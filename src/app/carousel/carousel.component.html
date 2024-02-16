@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+</head>
+
+<body >
+  <!-- Swiper -->
+  <section class="text-gray-400 bg-gray-900 body-font">
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+    centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+    <swiper-slide *ngFor="let news of trending">   <div class="flex overflow-x-auto">
+        <div class="container px-4 py-10 mx-auto">
+          <!-- <h1 class="text-3xl font-medium title-font text-white mb-12 text-center">Testimonials</h1> -->
+         <a href="{{news.url}}" target="_blank">
+            <div class="flex flex-wrap -m-4 w-[1504px] h-[436.59px] bg-lime-600 bg-image" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url('{{news.urlToImage}}');">
+                <div class="title-t">
+                  <h3>{{news.title}}</h3>
+                </div>
+                </div>
+         </a>
+        </div>
+      </div></swiper-slide>
+    <div class="autoplay-progress" slot="container-end">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </swiper-container>
+
+  </section>
+ 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+
+    const swiperEl = document.querySelector("swiper-container");
+    swiperEl.addEventListener("autoplaytimeleft", (e) => {
+      const [swiper, time, progress] = e.detail;
+      progressCircle.style.setProperty("--progress", 1 - progress);
+      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+    });
+  </script>
+</body>
+
+</html>
+
+
+<!-- <section class="text-gray-400 bg-gray-900 body-font">
+    <div class="flex overflow-x-auto">
+      <div class="container px-4 py-10 mx-auto">
+        <h1 class="text-3xl font-medium title-font text-white mb-12 text-center">Testimonials</h1>
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 w-full"> 
+            <div class="h-full bg-gray-800 bg-opacity-40 p-8 rounded">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-500 mb-4" viewBox="0 0 975.036 975.036">
+               
+              </svg>
+              <p class="leading-relaxed mb-6">Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90's microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland.</p>
+              <a class="inline-flex items-center">
+                <img alt="testimonial" src="https://dummyimage.com/106x106" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                <span class="flex-grow flex flex-col pl-4">
+                  <span class="title-font font-medium text-white">Holden Caulfield</span>
+                  <span class="text-gray-500 text-sm">UI DEVELOPER</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section> -->
