@@ -1,0 +1,95 @@
+<Use of tailwindcss in angular>
+*****************************************************************************
+Some command : 
+#Install Tailwinds in Angular> npm install -D tailwindcss postcss autoprefixer
+#generate “tailwind.config.js”> npx tailwindcss init
+
+Website Refrence : http://phpnodetuts.in/how-to-install-tailwind-css-in-angular-app/
+
+**************************************************************************************************
+
+Official link : https://tailwindcss.com/docs/installation/play-cdn
+Templates link : https://tailblocks.cc/
+******************************************************************************
+1.To create the application > ng new <Application name> e.g > ng new myWeb
+
+2.To create the various component like Home,About,Contact> ng g c Home --skip-tests ( by using this skip-tests,it will skip the test file)
+
+3.To use the Tailwinds : <script src="https://cdn.tailwindcss.com"></script> (Paste this into the index.html)
+
+4.Active outer links: 
+   a.RouterLinkActive => routerLinkActive="..." it is used to binding the property, it is used as class 
+   b.RouterLinkActiveOptions =>  parent and child router links can be active at the same time. To override this behavior, it used.
+   c.ariaCurrentWhenActive="page" : To identify the active link 
+
+5.To pass the title into the every component through the router path (Changing title for pages)
+
+6.Page not found component (used wildcard) =>  {'path':'**', 'title':'404 - Page Not Found', component:PageNotFoundComponent},
+
+7.Common routing task Like : Redirect page somthing like wildcard=>  {'path': '',   redirectTo: '/home', pathMatch: 'full' },(Note - Always it will come before wildcard)
+
+******************************
+Buildup of News Application 
+
+Api key : 2dabcd62ba2e4bb38e76d8ae929f93a6
+
+***************************************************************
+
+#Integrated News Api(API link : https://newsapi.org/)
+
+1.Filter for latest news in india 
+
+2.category( Generated component of business entertainment general health science sports technology) 
+The category you want to get headlines for. Possible options: business entertainment general health science sports technology.
+
+3.Implemented all component api call for news category 
+
+4.Added features component and implemented 
+
+***************************************************
+## Afternoon : Shiva bro gave the work to write the code on the Touax project for sorting and implementing the prime-lazy-grid (done)
+
+*****************************************************************************************************************************************************************************************************
+1.Install the Angular material 
+
+2.MatProgressSpinnerModule 
+
+3.MatProgressBarModule - It is a horizontal progress-bar for indicating progress and activity.
+ > Various Mode : Indeterminate, Buffer, Query
+4.Intercepter for progressbar 
+
+5.Loader for progress bar 
+
+6.Interceptor for the API loading bar 
+
+Ref Link :
+a.https://www.geeksforgeeks.org/mat-progress-bar-in-angular-material/
+b.https://material.angular.io/components/progress-bar/api
+
+7.API response handle(if some data like image is not avilable in that image then set the any default image ) 
+
+8.W3Forms for submit the contact form : link : https://web3forms.com/
+
+9.Swiper Slider : https://youtu.be/qUTYO_IqPqM?si=6ls0XFpSYF8_iwzq (Youtube reference) (swiperJs link : https://swiperjs.com/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
