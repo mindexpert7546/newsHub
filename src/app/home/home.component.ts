@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   getTechData(){
     this.apiService.getTechCrunchNews().subscribe(response=>{
-      this.newsTech = response.articles.slice(0, 9);
+      this.newsTech = response.articles.slice(6, 15);
       console.log(response);
 
       // To handle the image response if image is null then defaule image will be set 
