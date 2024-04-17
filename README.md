@@ -1,4 +1,4 @@
-### Live view : https://fake-details.vercel.app/list-view
+### Live view : 
 ## Screen shot 
 ![image](https://github.com/mindexpert7546/newsHub/assets/89348788/18f099a0-f10a-4dc8-96f5-bc5ac7234423)
 ![image](https://github.com/mindexpert7546/newsHub/assets/89348788/2bfa904f-5a72-4ab8-96be-ce580755022b)
